@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, DripsyProvider, createThemedComponent, Text } from 'dripsy'
+import { View, DripsyProvider, createThemedComponent, Text, H1 } from 'dripsy'
 import * as Native from 'react-native'
 
 const theme = {
@@ -32,6 +32,7 @@ export default function App() {
           backgroundColor: ['green', 'purple', null, 'black', 'red'],
         }}
       />
+      <H1>Title</H1>
 
       <Text sx={{ fontSize: [100, 200] }}>Hi</Text>
       <ThemedText>Nice</ThemedText>
