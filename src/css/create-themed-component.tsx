@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/ban-ts-ignore */
-import React, { ComponentType, ComponentProps, useMemo, PropsWithChildren } from 'react'
+import React, { ComponentType, ComponentProps, useMemo } from 'react'
 import { ThemedOptions, StyledProps } from './types'
 import { useThemeUI } from '@theme-ui/core'
 import { useBreakpointIndex, mapPropsToStyledComponent } from '.'
@@ -12,7 +12,7 @@ export function createThemedComponent<P, T>(
   Component: ComponentType<P>,
   { defaultStyle: baseStyle, ...options }: ThemedOptions<T> = {}
 ): React.ForwardRefExoticComponent<
-  Props<P> & PropsWithChildren<typeof Component> & T & P
+  Props<P> & ComponentProps<typeof Component> & T & P
 > {
   // without styled-components...
   const WrappedComponent = React.forwardRef<

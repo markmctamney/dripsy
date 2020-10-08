@@ -12,7 +12,6 @@
     "test": "jest"
   },
   "dependencies": {
-    "dripsy": "../dripsy-v0.6.0-fresnel-2.1.tgz",
     "expo": "~37.0.3",
     "react": "~16.9.0",
     "react-dom": "~16.9.0",
